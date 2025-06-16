@@ -1,170 +1,139 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background-color: black;
-        color: white;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        height: 100vh;
-        overflow-x: hidden;
-      }
-
-      .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-      }
-
-      .logo {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 20px;
-      }
-
-      .center {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      h1 {
-        color: rgb(26, 226, 26);
-        font-size: 24px;
-      }
-
-      h2 {
-        color: rgb(115, 116, 117);
-      }
-
-      .paragraph {
-        line-height: 1.8;
-      }
-
-      .link {
-        color: rgba(152, 153, 153, 0.879);
-        text-decoration: none;
-      }
-
-      .link:hover {
-        color: blue;
-        text-decoration: underline;
-      }
-
-      button {
-        background-color: rgb(17, 228, 17);
-        border: none;
-        color: black;
-        display: block;
-        margin: 20px auto;
-        height: 40px;
-        width: 100%;
-        max-width: 200px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: rgb(81, 154, 81);
-      }
-
-      ul {
-        margin-left: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .center {
-          margin: 0 auto;
-        }
-
-        h1 {
-          font-size: 20px;
-        }
-
-        h2 {
-          font-size: 16px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img src="IMG-20250321-WA0019.jpg" alt="Not Available" class="center" />
-        <div class="head">
-          <h1 class="name">Surendra Rokay</h1>
-          <h2>Web Developer</h2>
-        </div>
-      </div>
-
-      <div class="paragraph">
-        <h1>About Me</h1>
-        <p>
-          Hello! I'm Rokaya Surendra <br />
-          "Aspiring Web Developer & Programmer | Passionate about coding and
-          building innovative digital experiences. Currently learning and
-          growing my skills to become a professional in the tech world!"
-        </p>
-
-        <h1>Skills</h1>
-        <ul>
-          <li>HTML, CSS, PYTHON, C++</li>
-        </ul>
-
-        <h1>Experiences</h1>
-        <ul>
-          <li>Basic experience with HTML, CSS, Python, and C++</li>
-        </ul>
-
-        <h1>Education</h1>
-        <ul>
-          <li>Graduate in Science</li>
-        </ul>
-
-        <h1>Contact</h1>
-        <ul>
-          <li>
-            Email:
-            <a href="mailto:surendrarokaya09@gmail.com" class="link"
-              >surendrarokaya09@gmail.com</a
-            >
-          </li>
-          <li>
-            Phone:
-            <a href="tel:+821044867010" class="link">(+82)1044867010</a>
-          </li>
-          <li>
-            LinkedIn:
-            <a
-              href="https://en.wikipedia.org/wiki/Culture_of_Nepal"
-              class="link"
-              >Culture_of_Nepal</a
-            >
-          </li>
-        </ul>
-
-        <a href="https://www.w3schools.com/"><button>Click Here</button></a>
-
-        <center><strong>Thank You!</strong></center>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Surendra Rokay</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      padding-left: 70px;
+      transition: background-color 0.5s;
+    }
+    .logo {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .center {
+      margin-top: 30px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+    h1 {
+      color: rgb(26, 226, 26);
+    }
+    h2 {
+      color: rgb(115, 116, 117);
+    }
+    .paragraph {
+      padding-left: 70px;
+      line-height: 1.8;
+    }
+    .link {
+      color: rgba(152, 153, 153, 0.879);
+      text-decoration: none;
+    }
+    .link:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+    button {
+      background-color: rgb(17, 228, 17);
+      border: none;
+      color: black;
+      display: block;
+      margin: 10px auto;
+      height: 40px;
+      width: 200px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(81, 154, 81);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="surd.jpg" alt="Not Available" class="center">
+    <div class="head">
+      <h1 class="name">Surendra Rokay</h1>
+      <h2>Web Developer</h2>
     </div>
-  </body>
+  </div>
+
+  <div class="paragraph">
+    <h1 id="typingTitle"></h1>
+    <p id="typingPara"></p>
+
+    <h1>Skills</h1>
+    <ul>
+      <li>HTML, CSS, PYTHON, C++</li>
+    </ul>
+
+    <h1>Experiences</h1>
+    <ul>
+      <li>Basic experience of HTML, CSS, Python and C++</li>
+    </ul>
+
+    <h1>Education</h1>
+    <ul>
+      <li>Graduate in Science</li>
+    </ul>
+
+    <h1>Contact</h1>
+    <ul>
+      <li>Email: <a href="mailto:surendrarokaya09@gmail.com" class="link">surendrarokaya09@gmail.com</a></li>
+      <li>Phone: <a href="tel:+821044867010" class="link">(+82)1044867010</a></li>
+      <li>LinkedIn: <a href="https://en.wikipedia.org/wiki/Culture_of_Nepal" class="link">Culture_of_Nepal</a></li>
+    </ul>
+
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="window.location.href='mailto:surendrarokaya09@gmail.com'">📧 Email Me</button>
+
+    <br><center><strong>Thank You!</strong></center>
+  </div>
+
+  <script>
+    // Typing effect for title
+    const titleText = "About Me";
+    let titleIndex = 0;
+
+    function typeTitle() {
+      if (titleIndex < titleText.length) {
+        document.getElementById("typingTitle").innerHTML += titleText.charAt(titleIndex);
+        titleIndex++;
+        setTimeout(typeTitle, 100);
+      } else {
+        typeParagraph(); // Start paragraph after title
+      }
+    }
+
+    // Typing effect for paragraph
+    const paraText = `Hello! I'm Rokaya Surendra. Aspiring Web Developer & Programmer | Passionate about coding and building innovative digital experiences. Currently learning and growing my skills to become a professional in the tech world!`;
+    let paraIndex = 0;
+
+    function typeParagraph() {
+      if (paraIndex < paraText.length) {
+        document.getElementById("typingPara").innerHTML += paraText.charAt(paraIndex);
+        paraIndex++;
+        setTimeout(typeParagraph, 30);
+      }
+    }
+
+    // Change background color button
+    function changeBackground() {
+      const colors = ["black", "#1c1c1c", "#003333", "#2a2a72", "#0f0f0f", "#222"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Start typing when page loads
+    window.onload = typeTitle;
+  </script>
+</body>
 </html>
